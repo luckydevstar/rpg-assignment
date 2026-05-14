@@ -46,6 +46,10 @@ lerna-debug.log*
 .temp
 .tmp
 
+# Local SQLite (assignment DB)
+*.sqlite
+data.sqlite
+
 # Runtime data
 pids
 *.pid

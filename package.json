@@ -1,0 +1,9 @@
+{
+  "name": "rpg-assignment",
+  "private": true,
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "dev:backend": "bun run --cwd backend start:dev",
+    "dev:frontend": "bun run --cwd frontend dev"
+  }
+}

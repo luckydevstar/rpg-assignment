@@ -10,7 +10,17 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  server: {
+    proxy: {
+      '/graphql': {
+        target: 'http://localhost:3200',
+        changeOrigin: true,
+        ws: true,
+      },
+    },
+  },
   resolve: {
+    dedupe: ['vue', '@vue/apollo-composable', '@apollo/client'],
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
